@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet,
   Dimensions,
+  KeyboardAvoidingView,
 } from 'react-native';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import {useNavigation} from '@react-navigation/native';
@@ -62,7 +63,7 @@ const OnePage = () => {
 
       <View style={styles.FormContainer}>
         <View style={styles.TitleContainer}>
-          <Text style={styles.TitleText}>FORM</Text>
+          <Text style={styles.TitleText}>USER INFO</Text>
         </View>
 
         <TextInput
@@ -72,7 +73,7 @@ const OnePage = () => {
               borderColor: TextInputOne.length >= 4 ? 'green' : 'red',
             },
           ]}
-          placeholder="TEXT FORM FILED"
+          placeholder="NAME"
           onChangeText={value => setTextInputOne(value)}
           value={TextInputOne}
         />
@@ -83,7 +84,7 @@ const OnePage = () => {
               borderColor: TextInputTwo.length >= 4 ? 'green' : 'red',
             },
           ]}
-          placeholder="TEXT FORM FILED"
+          placeholder="SURNAME"
           onChangeText={value => setTextInputTwo(value)}
           value={TextInputTwo}
         />
@@ -94,7 +95,7 @@ const OnePage = () => {
               borderColor: TextInputThree.length >= 4 ? 'green' : 'red',
             },
           ]}
-          placeholder="TEXT FORM FILED"
+          placeholder="CITY"
           onChangeText={value => setTextInputThree(value)}
           value={TextInputThree}
         />
@@ -105,7 +106,7 @@ const OnePage = () => {
               borderColor: TextInputFour.length >= 4 ? 'green' : 'red',
             },
           ]}
-          placeholder="TEXT FORM FILED"
+          placeholder="E-MAIL"
           onChangeText={value => setTextInputFour(value)}
           value={TextInputFour}
         />
@@ -118,14 +119,14 @@ const OnePage = () => {
             styles.ResetButtonContainer,
             {
               backgroundColor: TextInputOne
-                ? '#CFE2F3'
-                : 'gray' && TextInputTwo
-                ? '#CFE2F3'
-                : 'gray' && TextInputThree
-                ? '#CFE2F3'
-                : 'gray' && TextInputFour
-                ? '#CFE2F3'
-                : 'gray',
+                ? '#E96479'
+                : '#474E68' && TextInputTwo
+                ? '#E96479'
+                : '#474E68' && TextInputThree
+                ? '#E96479'
+                : '#474E68' && TextInputFour
+                ? '#E96479'
+                : '#474E68',
             },
           ]}
           disabled={
@@ -151,8 +152,8 @@ const OnePage = () => {
                 TextInputTwo.length >= 4 &&
                 TextInputThree.length >= 4 &&
                 TextInputFour.length >= 4
-                  ? '#CFE2F3'
-                  : 'gray',
+                  ? '#E96479'
+                  : '#474E68',
             },
           ]}
           disabled={
@@ -169,7 +170,7 @@ const OnePage = () => {
 
       <View style={styles.FooterAllContainer}>
         <View style={styles.FooterContainer}>
-          <Text style={styles.FooterText}>FOOTER</Text>
+          <Text style={styles.FooterText}>HYPER COMPANY</Text>
         </View>
       </View>
     </View>
@@ -180,7 +181,7 @@ export default OnePage;
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: '#F4CDCA',
+    backgroundColor: '#176B87',
   },
   HeaderContainer: {
     backgroundColor: '#FFE59A',
@@ -197,19 +198,21 @@ const styles = StyleSheet.create({
     height: Dimensions.get('screen').height / 2,
     padding: 20,
     justifyContent: 'space-between',
+    //marginTop:Dimensions.get('screen').height / 12
   },
   TitleContainer: {
-    backgroundColor: '#1055CC',
+    backgroundColor: '#64CCC5',
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 4,
     borderRightWidth: 4,
-    borderColor: '#fff',
+    borderColor: '#053B50',
     borderRadius: 5,
   },
   TitleText: {
-    color: '#fff',
+    color: '#000',
     fontSize: 18,
+    fontWeight: '500',
     paddingVertical: 5,
   },
   TextInput: {
@@ -229,24 +232,24 @@ const styles = StyleSheet.create({
   ResetButtonContainer: {
     borderBottomWidth: 4,
     borderLeftWidth: 4,
-    borderColor: '#fff',
+    borderColor: 'gray',
     borderRadius: 10,
   },
   ResetButtonText: {
-    paddingVertical: 20,
+    paddingVertical: 13,
     paddingHorizontal: Dimensions.get('screen').width / 8,
-    color: '#000',
+    color: '#fff',
   },
   SubmitButtonContainer: {
     borderBottomWidth: 4,
     borderLeftWidth: 4,
-    borderColor: '#fff',
+    borderColor: 'gray',
     borderRadius: 10,
   },
   SubmitButtonText: {
-    paddingVertical: 20,
+    paddingVertical: 13,
     paddingHorizontal: Dimensions.get('screen').width / 8,
-    color: '#000',
+    color: '#fff',
   },
   FooterAllContainer: {
     flex: 1,

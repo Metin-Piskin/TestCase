@@ -54,7 +54,7 @@ const TwoPage = () => {
       <View
         style={[
           styles.HeaderContainer,
-          {backgroundColor: color ? '#F4CDCA' : '#FFE59A'},
+          {backgroundColor: color ? '#176B87' : '#FFE59A'},
         ]}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Text style={styles.BackText}>￩</Text>
@@ -65,7 +65,7 @@ const TwoPage = () => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView style={{backgroundColor: '#F4CDCA'}}>
+      <ScrollView style={{backgroundColor: '#176B87'}}>
         <View style={styles.ScrollViewContainer}>
           {TextInputs.map((e, index) => {
             return (
@@ -82,19 +82,19 @@ const TwoPage = () => {
                       },
                     ]}>
                     <View style={styles.MenüItemInnerContainer}>
-                      <Text style={styles.MenüItemTitle}>Text One: </Text>
+                      <Text style={styles.MenüItemTitle}>Name: </Text>
                       <Text style={styles.MenüItemText}>{e.TextOne}</Text>
                     </View>
                     <View style={styles.MenüItemInnerContainer}>
-                      <Text style={styles.MenüItemTitle}>Text Two: </Text>
+                      <Text style={styles.MenüItemTitle}>Surname: </Text>
                       <Text style={styles.MenüItemText}>{e.TextTwo}</Text>
                     </View>
                     <View style={styles.MenüItemInnerContainer}>
-                      <Text style={styles.MenüItemTitle}>Text Three: </Text>
+                      <Text style={styles.MenüItemTitle}>City: </Text>
                       <Text style={styles.MenüItemText}>{e.TextThree}</Text>
                     </View>
                     <View style={styles.MenüItemInnerContainer}>
-                      <Text style={styles.MenüItemTitle}>Text Four: </Text>
+                      <Text style={styles.MenüItemTitle}>E-Mail: </Text>
                       <Text style={styles.MenüItemText}>{e.TextFour}</Text>
                     </View>
                   </TouchableOpacity>
@@ -108,7 +108,7 @@ const TwoPage = () => {
       <View
         style={[
           styles.FooterAllContainer,
-          {backgroundColor: color ? '#F4CDCA' : '#B6D7A8'},
+          {backgroundColor: color ? '#176B87' : '#B6D7A8'},
         ]}>
         <View style={styles.FooterContainer}>
           <Text style={styles.FooterText}>FOOTER</Text>
@@ -123,7 +123,7 @@ export default TwoPage;
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: '#F4CDCA',
+    backgroundColor: '#176B87',
   },
   HeaderContainer: {
     alignItems: 'center',
@@ -152,6 +152,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 4,
     borderRightWidth: 4,
     borderRadius: 20,
+    borderColor:'#053B50'
   },
   MenüItemInnerContainer: {
     flexDirection: 'row',
